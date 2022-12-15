@@ -91,7 +91,7 @@ for testing before adding it to your `.zshrc`.
 
 #### [Oh-My-Zsh](http://ohmyz.sh/)
 
-1. `git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open`
+1. `git clone https://github.com/samsonw/git-open.git $ZSH_CUSTOM/plugins/git-open`
 1. Add `git-open` to your plugin list - edit `~/.zshrc` and change
     `plugins=(...)` to `plugins=(... git-open)`
 
@@ -121,7 +121,7 @@ git-open can automatically guess the corresponding repository page for remotes
 - Team Foundation Server (on-premises)
 - AWS Code Commit
 
-## Configuration 
+## Configuration
 
 See the [man page](git-open.1.md) for more information on how to configure `git-open`.
 
@@ -176,7 +176,7 @@ Copyright Jason McCreary & Paul Irish. Licensed under MIT.
 ## Changelog
 
 
-- **2018-12-03** - [2.1.0 shipped](https://github.com/paulirish/git-open/releases/tag/v2.1.0). 
+- **2018-12-03** - [2.1.0 shipped](https://github.com/paulirish/git-open/releases/tag/v2.1.0).
 - **2017-12-01** - [2.0 shipped](https://github.com/paulirish/git-open/releases/tag/v2.0.0). Breaking change: [Gitlab configuration](https://github.com/paulirish/git-open#configuration) handled differently.
 - **2017-12-01** - Configuration for custom remote added
 - **2017-11-30** - Support for VSTS Added

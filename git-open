@@ -234,6 +234,14 @@ elif [[ "$domain" =~ amazonaws\.com$ ]]; then
   # Replace branch ref.
   # Ex. /tree/foobar -> foobar/--/
   providerBranchRef="${providerBranchRef##*/}/--/"
+elif [[ "$domain" =~ amazon\.com$ ]]; then
+  if (( is_issue )); then
+    echo "Issue feature does not supported." 1>&2
+    exit 1
+  fi
+
+  urlpath="packages/${urlpath##*/}"
+  providerBranchRef="/trees/${providerBranchRef##*/}"
 fi
 
 openurl="$protocol://$domain/$urlpath"
@@ -241,6 +249,7 @@ openurl="$protocol://$domain/$urlpath"
 if (( is_commit )); then
     sha=$(git rev-parse HEAD)
     openurl="$openurl/commit/$sha"
+# elif [[ $remote_ref != "master" && $remote_ref != "mainline" ]]; then
 elif [[ $remote_ref != "master" ]]; then
     # simplify URL for master
     openurl="$openurl$providerBranchRef"
